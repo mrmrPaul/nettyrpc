@@ -74,7 +74,7 @@ public final class RpcProto {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return publicinterface.RpcProto.getDescriptor().getEnumTypes().get(0);
+      return RpcProto.getDescriptor().getEnumTypes().get(0);
     }
     
     private static final ErrorCode[] VALUES = {
@@ -84,7 +84,7 @@ public final class RpcProto {
     public static ErrorCode valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
+        throw new IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
       }
       return VALUES[desc.getIndex()];
@@ -144,23 +144,23 @@ public final class RpcProto {
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return publicinterface.RpcProto.internal_static_publicinterface_RpcRequest_descriptor;
+      return RpcProto.internal_static_publicinterface_RpcRequest_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return publicinterface.RpcProto.internal_static_publicinterface_RpcRequest_fieldAccessorTable;
+      return RpcProto.internal_static_publicinterface_RpcRequest_fieldAccessorTable;
     }
     
     private int bitField0_;
     // optional string requestId = 1;
     public static final int REQUESTID_FIELD_NUMBER = 1;
-    private java.lang.Object requestId_;
+    private Object requestId_;
     public boolean hasRequestId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     public String getRequestId() {
-      java.lang.Object ref = requestId_;
+      Object ref = requestId_;
       if (ref instanceof String) {
         return (String) ref;
       } else {
@@ -174,7 +174,7 @@ public final class RpcProto {
       }
     }
     private com.google.protobuf.ByteString getRequestIdBytes() {
-      java.lang.Object ref = requestId_;
+      Object ref = requestId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8((String) ref);
@@ -187,12 +187,12 @@ public final class RpcProto {
     
     // optional string className = 2;
     public static final int CLASSNAME_FIELD_NUMBER = 2;
-    private java.lang.Object className_;
+    private Object className_;
     public boolean hasClassName() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     public String getClassName() {
-      java.lang.Object ref = className_;
+      Object ref = className_;
       if (ref instanceof String) {
         return (String) ref;
       } else {
@@ -206,7 +206,7 @@ public final class RpcProto {
       }
     }
     private com.google.protobuf.ByteString getClassNameBytes() {
-      java.lang.Object ref = className_;
+      Object ref = className_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8((String) ref);
@@ -219,12 +219,12 @@ public final class RpcProto {
     
     // optional string methodName = 3;
     public static final int METHODNAME_FIELD_NUMBER = 3;
-    private java.lang.Object methodName_;
+    private Object methodName_;
     public boolean hasMethodName() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     public String getMethodName() {
-      java.lang.Object ref = methodName_;
+      Object ref = methodName_;
       if (ref instanceof String) {
         return (String) ref;
       } else {
@@ -238,7 +238,7 @@ public final class RpcProto {
       }
     }
     private com.google.protobuf.ByteString getMethodNameBytes() {
-      java.lang.Object ref = methodName_;
+      Object ref = methodName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8((String) ref);
@@ -338,47 +338,47 @@ public final class RpcProto {
     }
     
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
+    @Override
+    protected Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
     
-    public static publicinterface.RpcProto.RpcRequest parseFrom(
+    public static RpcRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static publicinterface.RpcProto.RpcRequest parseFrom(
+    public static RpcRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static publicinterface.RpcProto.RpcRequest parseFrom(byte[] data)
+    public static RpcRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static publicinterface.RpcProto.RpcRequest parseFrom(
+    public static RpcRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static publicinterface.RpcProto.RpcRequest parseFrom(java.io.InputStream input)
+    public static RpcRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static publicinterface.RpcProto.RpcRequest parseFrom(
+    public static RpcRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
     }
-    public static publicinterface.RpcProto.RpcRequest parseDelimitedFrom(java.io.InputStream input)
+    public static RpcRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input)) {
@@ -387,7 +387,7 @@ public final class RpcProto {
         return null;
       }
     }
-    public static publicinterface.RpcProto.RpcRequest parseDelimitedFrom(
+    public static RpcRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -398,12 +398,12 @@ public final class RpcProto {
         return null;
       }
     }
-    public static publicinterface.RpcProto.RpcRequest parseFrom(
+    public static RpcRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static publicinterface.RpcProto.RpcRequest parseFrom(
+    public static RpcRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -413,28 +413,28 @@ public final class RpcProto {
     
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(publicinterface.RpcProto.RpcRequest prototype) {
+    public static Builder newBuilder(RpcRequest prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
     
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements publicinterface.RpcProto.RpcRequestOrBuilder {
+       implements RpcRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return publicinterface.RpcProto.internal_static_publicinterface_RpcRequest_descriptor;
+        return RpcProto.internal_static_publicinterface_RpcRequest_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return publicinterface.RpcProto.internal_static_publicinterface_RpcRequest_fieldAccessorTable;
+        return RpcProto.internal_static_publicinterface_RpcRequest_fieldAccessorTable;
       }
       
       // Construct using publicinterface.RpcProto.RpcRequest.newBuilder()
@@ -475,24 +475,24 @@ public final class RpcProto {
       
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return publicinterface.RpcProto.RpcRequest.getDescriptor();
+        return RpcRequest.getDescriptor();
       }
       
-      public publicinterface.RpcProto.RpcRequest getDefaultInstanceForType() {
-        return publicinterface.RpcProto.RpcRequest.getDefaultInstance();
+      public RpcRequest getDefaultInstanceForType() {
+        return RpcRequest.getDefaultInstance();
       }
       
-      public publicinterface.RpcProto.RpcRequest build() {
-        publicinterface.RpcProto.RpcRequest result = buildPartial();
+      public RpcRequest build() {
+        RpcRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
       
-      private publicinterface.RpcProto.RpcRequest buildParsed()
+      private RpcRequest buildParsed()
           throws com.google.protobuf.InvalidProtocolBufferException {
-        publicinterface.RpcProto.RpcRequest result = buildPartial();
+        RpcRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
             result).asInvalidProtocolBufferException();
@@ -500,8 +500,8 @@ public final class RpcProto {
         return result;
       }
       
-      public publicinterface.RpcProto.RpcRequest buildPartial() {
-        publicinterface.RpcProto.RpcRequest result = new publicinterface.RpcProto.RpcRequest(this);
+      public RpcRequest buildPartial() {
+        RpcRequest result = new RpcRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -530,16 +530,16 @@ public final class RpcProto {
       }
       
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof publicinterface.RpcProto.RpcRequest) {
-          return mergeFrom((publicinterface.RpcProto.RpcRequest)other);
+        if (other instanceof RpcRequest) {
+          return mergeFrom((RpcRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
       
-      public Builder mergeFrom(publicinterface.RpcProto.RpcRequest other) {
-        if (other == publicinterface.RpcProto.RpcRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(RpcRequest other) {
+        if (other == RpcRequest.getDefaultInstance()) return this;
         if (other.hasRequestId()) {
           setRequestId(other.getRequestId());
         }
@@ -618,12 +618,12 @@ public final class RpcProto {
       private int bitField0_;
       
       // optional string requestId = 1;
-      private java.lang.Object requestId_ = "";
+      private Object requestId_ = "";
       public boolean hasRequestId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       public String getRequestId() {
-        java.lang.Object ref = requestId_;
+        Object ref = requestId_;
         if (!(ref instanceof String)) {
           String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           requestId_ = s;
@@ -654,12 +654,12 @@ public final class RpcProto {
       }
       
       // optional string className = 2;
-      private java.lang.Object className_ = "";
+      private Object className_ = "";
       public boolean hasClassName() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       public String getClassName() {
-        java.lang.Object ref = className_;
+        Object ref = className_;
         if (!(ref instanceof String)) {
           String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           className_ = s;
@@ -690,12 +690,12 @@ public final class RpcProto {
       }
       
       // optional string methodName = 3;
-      private java.lang.Object methodName_ = "";
+      private Object methodName_ = "";
       public boolean hasMethodName() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       public String getMethodName() {
-        java.lang.Object ref = methodName_;
+        Object ref = methodName_;
         if (!(ref instanceof String)) {
           String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           methodName_ = s;
@@ -794,7 +794,7 @@ public final class RpcProto {
     
     // optional .publicinterface.ErrorCode errorCode = 3;
     boolean hasErrorCode();
-    publicinterface.RpcProto.ErrorCode getErrorCode();
+    ErrorCode getErrorCode();
     
     // optional string errorMessage = 4;
     boolean hasErrorMessage();
@@ -820,23 +820,23 @@ public final class RpcProto {
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return publicinterface.RpcProto.internal_static_publicinterface_RpcResponse_descriptor;
+      return RpcProto.internal_static_publicinterface_RpcResponse_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return publicinterface.RpcProto.internal_static_publicinterface_RpcResponse_fieldAccessorTable;
+      return RpcProto.internal_static_publicinterface_RpcResponse_fieldAccessorTable;
     }
     
     private int bitField0_;
     // optional string responseId = 1;
     public static final int RESPONSEID_FIELD_NUMBER = 1;
-    private java.lang.Object responseId_;
+    private Object responseId_;
     public boolean hasResponseId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     public String getResponseId() {
-      java.lang.Object ref = responseId_;
+      Object ref = responseId_;
       if (ref instanceof String) {
         return (String) ref;
       } else {
@@ -850,7 +850,7 @@ public final class RpcProto {
       }
     }
     private com.google.protobuf.ByteString getResponseIdBytes() {
-      java.lang.Object ref = responseId_;
+      Object ref = responseId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8((String) ref);
@@ -873,22 +873,22 @@ public final class RpcProto {
     
     // optional .publicinterface.ErrorCode errorCode = 3;
     public static final int ERRORCODE_FIELD_NUMBER = 3;
-    private publicinterface.RpcProto.ErrorCode errorCode_;
+    private ErrorCode errorCode_;
     public boolean hasErrorCode() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public publicinterface.RpcProto.ErrorCode getErrorCode() {
+    public ErrorCode getErrorCode() {
       return errorCode_;
     }
     
     // optional string errorMessage = 4;
     public static final int ERRORMESSAGE_FIELD_NUMBER = 4;
-    private java.lang.Object errorMessage_;
+    private Object errorMessage_;
     public boolean hasErrorMessage() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     public String getErrorMessage() {
-      java.lang.Object ref = errorMessage_;
+      Object ref = errorMessage_;
       if (ref instanceof String) {
         return (String) ref;
       } else {
@@ -902,7 +902,7 @@ public final class RpcProto {
       }
     }
     private com.google.protobuf.ByteString getErrorMessageBytes() {
-      java.lang.Object ref = errorMessage_;
+      Object ref = errorMessage_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8((String) ref);
@@ -916,7 +916,7 @@ public final class RpcProto {
     private void initFields() {
       responseId_ = "";
       responseMessage_ = com.google.protobuf.ByteString.EMPTY;
-      errorCode_ = publicinterface.RpcProto.ErrorCode.BAD_REQUEST_DATA;
+      errorCode_ = ErrorCode.BAD_REQUEST_DATA;
       errorMessage_ = "";
     }
     private byte memoizedIsInitialized = -1;
@@ -974,47 +974,47 @@ public final class RpcProto {
     }
     
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
+    @Override
+    protected Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
     
-    public static publicinterface.RpcProto.RpcResponse parseFrom(
+    public static RpcResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static publicinterface.RpcProto.RpcResponse parseFrom(
+    public static RpcResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static publicinterface.RpcProto.RpcResponse parseFrom(byte[] data)
+    public static RpcResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static publicinterface.RpcProto.RpcResponse parseFrom(
+    public static RpcResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static publicinterface.RpcProto.RpcResponse parseFrom(java.io.InputStream input)
+    public static RpcResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static publicinterface.RpcProto.RpcResponse parseFrom(
+    public static RpcResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
     }
-    public static publicinterface.RpcProto.RpcResponse parseDelimitedFrom(java.io.InputStream input)
+    public static RpcResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input)) {
@@ -1023,7 +1023,7 @@ public final class RpcProto {
         return null;
       }
     }
-    public static publicinterface.RpcProto.RpcResponse parseDelimitedFrom(
+    public static RpcResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1034,12 +1034,12 @@ public final class RpcProto {
         return null;
       }
     }
-    public static publicinterface.RpcProto.RpcResponse parseFrom(
+    public static RpcResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static publicinterface.RpcProto.RpcResponse parseFrom(
+    public static RpcResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1049,28 +1049,28 @@ public final class RpcProto {
     
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(publicinterface.RpcProto.RpcResponse prototype) {
+    public static Builder newBuilder(RpcResponse prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
     
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements publicinterface.RpcProto.RpcResponseOrBuilder {
+       implements RpcResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return publicinterface.RpcProto.internal_static_publicinterface_RpcResponse_descriptor;
+        return RpcProto.internal_static_publicinterface_RpcResponse_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return publicinterface.RpcProto.internal_static_publicinterface_RpcResponse_fieldAccessorTable;
+        return RpcProto.internal_static_publicinterface_RpcResponse_fieldAccessorTable;
       }
       
       // Construct using publicinterface.RpcProto.RpcResponse.newBuilder()
@@ -1096,7 +1096,7 @@ public final class RpcProto {
         bitField0_ = (bitField0_ & ~0x00000001);
         responseMessage_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
-        errorCode_ = publicinterface.RpcProto.ErrorCode.BAD_REQUEST_DATA;
+        errorCode_ = ErrorCode.BAD_REQUEST_DATA;
         bitField0_ = (bitField0_ & ~0x00000004);
         errorMessage_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -1109,24 +1109,24 @@ public final class RpcProto {
       
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return publicinterface.RpcProto.RpcResponse.getDescriptor();
+        return RpcResponse.getDescriptor();
       }
       
-      public publicinterface.RpcProto.RpcResponse getDefaultInstanceForType() {
-        return publicinterface.RpcProto.RpcResponse.getDefaultInstance();
+      public RpcResponse getDefaultInstanceForType() {
+        return RpcResponse.getDefaultInstance();
       }
       
-      public publicinterface.RpcProto.RpcResponse build() {
-        publicinterface.RpcProto.RpcResponse result = buildPartial();
+      public RpcResponse build() {
+        RpcResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
       
-      private publicinterface.RpcProto.RpcResponse buildParsed()
+      private RpcResponse buildParsed()
           throws com.google.protobuf.InvalidProtocolBufferException {
-        publicinterface.RpcProto.RpcResponse result = buildPartial();
+        RpcResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
             result).asInvalidProtocolBufferException();
@@ -1134,8 +1134,8 @@ public final class RpcProto {
         return result;
       }
       
-      public publicinterface.RpcProto.RpcResponse buildPartial() {
-        publicinterface.RpcProto.RpcResponse result = new publicinterface.RpcProto.RpcResponse(this);
+      public RpcResponse buildPartial() {
+        RpcResponse result = new RpcResponse(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1160,16 +1160,16 @@ public final class RpcProto {
       }
       
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof publicinterface.RpcProto.RpcResponse) {
-          return mergeFrom((publicinterface.RpcProto.RpcResponse)other);
+        if (other instanceof RpcResponse) {
+          return mergeFrom((RpcResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
       
-      public Builder mergeFrom(publicinterface.RpcProto.RpcResponse other) {
-        if (other == publicinterface.RpcProto.RpcResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(RpcResponse other) {
+        if (other == RpcResponse.getDefaultInstance()) return this;
         if (other.hasResponseId()) {
           setResponseId(other.getResponseId());
         }
@@ -1225,7 +1225,7 @@ public final class RpcProto {
             }
             case 24: {
               int rawValue = input.readEnum();
-              publicinterface.RpcProto.ErrorCode value = publicinterface.RpcProto.ErrorCode.valueOf(rawValue);
+              ErrorCode value = ErrorCode.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(3, rawValue);
               } else {
@@ -1246,12 +1246,12 @@ public final class RpcProto {
       private int bitField0_;
       
       // optional string responseId = 1;
-      private java.lang.Object responseId_ = "";
+      private Object responseId_ = "";
       public boolean hasResponseId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       public String getResponseId() {
-        java.lang.Object ref = responseId_;
+        Object ref = responseId_;
         if (!(ref instanceof String)) {
           String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           responseId_ = s;
@@ -1306,14 +1306,14 @@ public final class RpcProto {
       }
       
       // optional .publicinterface.ErrorCode errorCode = 3;
-      private publicinterface.RpcProto.ErrorCode errorCode_ = publicinterface.RpcProto.ErrorCode.BAD_REQUEST_DATA;
+      private ErrorCode errorCode_ = ErrorCode.BAD_REQUEST_DATA;
       public boolean hasErrorCode() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public publicinterface.RpcProto.ErrorCode getErrorCode() {
+      public ErrorCode getErrorCode() {
         return errorCode_;
       }
-      public Builder setErrorCode(publicinterface.RpcProto.ErrorCode value) {
+      public Builder setErrorCode(ErrorCode value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1324,18 +1324,18 @@ public final class RpcProto {
       }
       public Builder clearErrorCode() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        errorCode_ = publicinterface.RpcProto.ErrorCode.BAD_REQUEST_DATA;
+        errorCode_ = ErrorCode.BAD_REQUEST_DATA;
         onChanged();
         return this;
       }
       
       // optional string errorMessage = 4;
-      private java.lang.Object errorMessage_ = "";
+      private Object errorMessage_ = "";
       public boolean hasErrorMessage() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       public String getErrorMessage() {
-        java.lang.Object ref = errorMessage_;
+        Object ref = errorMessage_;
         if (!(ref instanceof String)) {
           String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           errorMessage_ = s;
@@ -1394,7 +1394,7 @@ public final class RpcProto {
   private static com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\016RpcProto.proto\022\017publicinterface\"r\n\nRpc" +
       "Request\022\021\n\trequestId\030\001 \001(\t\022\021\n\tclassName\030" +
       "\002 \001(\t\022\022\n\nmethodName\030\003 \001(\t\022\022\n\nisBlocking\030" +
@@ -1420,17 +1420,17 @@ public final class RpcProto {
           internal_static_publicinterface_RpcRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_publicinterface_RpcRequest_descriptor,
-              new java.lang.String[] { "RequestId", "ClassName", "MethodName", "IsBlocking", "RequestMessage", },
-              publicinterface.RpcProto.RpcRequest.class,
-              publicinterface.RpcProto.RpcRequest.Builder.class);
+              new String[] { "RequestId", "ClassName", "MethodName", "IsBlocking", "RequestMessage", },
+              RpcRequest.class,
+              RpcRequest.Builder.class);
           internal_static_publicinterface_RpcResponse_descriptor =
             getDescriptor().getMessageTypes().get(1);
           internal_static_publicinterface_RpcResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_publicinterface_RpcResponse_descriptor,
-              new java.lang.String[] { "ResponseId", "ResponseMessage", "ErrorCode", "ErrorMessage", },
-              publicinterface.RpcProto.RpcResponse.class,
-              publicinterface.RpcProto.RpcResponse.Builder.class);
+              new String[] { "ResponseId", "ResponseMessage", "ErrorCode", "ErrorMessage", },
+              RpcResponse.class,
+              RpcResponse.Builder.class);
           return null;
         }
       };

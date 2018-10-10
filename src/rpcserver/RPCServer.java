@@ -1,5 +1,7 @@
 package rpcserver;
 
+import com.google.protobuf.Message;
+import com.google.protobuf.Service;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -7,18 +9,31 @@ import io.netty.channel.ChannelPipeline;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.handler.codec.string.StringDecoder;
-import io.netty.handler.codec.string.StringEncoder;
+import io.netty.handler.codec.protobuf.ProtobufDecoder;
+import io.netty.handler.codec.protobuf.ProtobufEncoder;
+import publicinterface.RpcProto;
 
 /**
  * 服务端 启动时 将rpc服务暴露
  */
 public class RPCServer
 {
-	public static void main(String args[])
+	private ServerHandler serverHandler;
+
+	public RPCServer()
 	{
-		RPCServer server = new RPCServer();
-		server.start("localhost", 54321);
+		serverHandler = new ServerHandler();
+	}
+
+	// 注册rpc服务
+	public void registerService(Service service)
+	{
+		serverHandler.registerService(service);
+	}
+
+	public void unregisterService(Service service)
+	{
+		serverHandler.unregisterService(service);
 	}
 
 	public void start(String host, int port)
@@ -35,13 +50,13 @@ public class RPCServer
 					{
 						ChannelPipeline pipeline = socketChannel.pipeline();
 						// 设置编解码器
-						pipeline.addLast(new StringDecoder());
-						pipeline.addLast(new StringEncoder());
+						Message defaultInstance = RpcProto.RpcRequest.getDefaultInstance();
+						pipeline.addLast("protobufEncoder", new ProtobufEncoder());
+						pipeline.addLast("protobufDecoder", new ProtobufDecoder(defaultInstance));
 						// 服务端消息处理
-						pipeline.addLast(new ServerHandler());
+						pipeline.addLast(serverHandler);
 					}
 				});
-
 		try
 		{
 			ChannelFuture future = bootstrap.bind(host, port).sync();

@@ -1,13 +1,34 @@
 package publicinterface;
 option java_package = "publicinterface";
-option java_outer_classname = "RequestProto";
+option java_outer_classname = "RpcProto";
 
-import "google/protobuf/any.proto";
-
-message RequestMsg {
+message RpcRequest {
     optional string requestId = 1; // 请求id
-    optional string cName = 2; // 类名
-    optional string mName = 3; // 方法名
-    repeated google.protobuf.Any paramTypes = 4; // 参数类型
-    repeated google.protobuf.Any params = 5; // 参数
+    optional string className = 2; // 类名
+    optional string methodName = 3; // 方法名
+    optional bool isBlocking = 4; // 是否是阻塞调用
+    optional bytes requestMessage = 5;
+}
+
+message RpcResponse {
+    optional string responseId = 1;
+    optional bytes responseMessage = 2;
+    optional ErrorCode errorCode = 3;
+    optional string errorMessage = 4;
+}
+
+enum ErrorCode {
+    // Server-side errors
+    BAD_REQUEST_DATA = 0; // Server received bad request data
+    BAD_REQUEST_PROTO = 1; // Server received bad request proto
+    SERVICE_NOT_FOUND = 2; // Service not found on server
+    METHOD_NOT_FOUND = 3; // Method not found on server
+    RPC_ERROR = 4; // Rpc threw exception on server
+    RPC_FAILED = 5; // Rpc failed on server
+
+    // Client-side errors (these are returned by the client-side code)
+    INVALID_REQUEST_PROTO = 6; // Rpc was called with invalid request proto
+    BAD_RESPONSE_PROTO = 7; // Server returned a bad response proto
+    UNKNOWN_HOST = 8; // Could not find supplied host
+    IO_ERROR = 9; // I/O error while communicating with server
 }

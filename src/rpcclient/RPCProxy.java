@@ -27,7 +27,7 @@ public class RPCProxy
 		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 		InvocationHandler invocationHandler = ((proxy, method, args) -> {
 			if (clientHandler == null)
-				initCLientHandler();
+				initClientHandler();
 			clientHandler.setPara(requestID + args[0]);
 			return executor.submit(clientHandler).get();
 		});
@@ -36,7 +36,7 @@ public class RPCProxy
 	}
 
 
-	private void initCLientHandler()
+	private void initClientHandler()
 	{
 		clientHandler = new ClientHandler();
 		EventLoopGroup group = new NioEventLoopGroup();
