@@ -1,0 +1,13 @@
+package publicinterface;
+option java_package = "publicinterface";
+option java_outer_classname = "RequestProto";
+
+import "google/protobuf/any.proto";
+
+message RequestMsg {
+    optional string requestId = 1; // 请求id
+    optional string cName = 2; // 类名
+    optional string mName = 3; // 方法名
+    repeated google.protobuf.Any paramTypes = 4; // 参数类型
+    repeated google.protobuf.Any params = 5; // 参数
+}
